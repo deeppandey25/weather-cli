@@ -1,6 +1,8 @@
 import requests
 
-API_KEY = "cbedb55de7d6090c74d798ea191b9284"   # <-- paste your API key here
+import os
+
+API_KEY = os.getenv("OPENWEATHER_API_KEY")  # <-- paste your API key here
 
 
 def get_weather_by_city(city):
@@ -67,6 +69,7 @@ def display_weather(data):
     print(f"Humidity    : {humidity}%")
     print(f"Timezone    : {timezone}")
     print("----------------------\n")
+    print(API_KEY)
 
 
 if __name__ == "__main__":

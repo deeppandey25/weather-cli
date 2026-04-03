@@ -1,7 +1,7 @@
 # Weather CLI Tool
 
 ## Overview
-This is a command-line interface (CLI) tool that fetches real-time weather data using the OpenWeather API.
+A command-line tool to fetch real-time weather data using the OpenWeather API.
 
 ## Features
 - Get weather by city name
@@ -14,7 +14,7 @@ This is a command-line interface (CLI) tool that fetches real-time weather data 
 - OpenWeather API
 
 ## Approach
-Instead of raw web scraping, I used an API because it provides structured and reliable data in JSON format. This makes parsing easier and avoids issues caused by changes in website HTML.
+Instead of web scraping, I used an API because it provides structured and reliable data in JSON format. This makes parsing easier and avoids issues caused by changes in website HTML.
 
 ## How it works
 1. User inputs location (city or coordinates)
@@ -27,12 +27,15 @@ Instead of raw web scraping, I used an API because it provides structured and re
 - Managing invalid inputs (wrong city names)
 - Understanding JSON parsing
 
-## How to run
-1. Install dependencies:
-   pip install requests
+---
 
-2. Run the program:
-   python main.py
+## 🔐 API Key Setup
 
-## Bonus
-- Implemented auto-location detection using IP-based API
+⚠️ API key is not included for security reasons. Please use your own.
+
+1. Get your API key from: https://openweathermap.org/api  
+2. Set it as an environment variable:
+
+### Windows
+```bash
+setx OPENWEATHER_API_KEY "your_api_key"
